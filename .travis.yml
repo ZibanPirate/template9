@@ -7,5 +7,5 @@ deploy:
   email: "$EMAIL_ADDRESS"
   api_key: "$AUTH_TOKEN"
   on:
-      tags: true
-      branch: master
+    tags: true
+    branch: master
