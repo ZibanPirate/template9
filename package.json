@@ -1,0 +1,45 @@
+{
+  "name": "template9",
+  "version": "1.0.0-alpha.3",
+  "description": "CLI that kinda help with frontend development",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "bin": {
+    "t9": "bin/t9.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZibanPirate/template9.git"
+  },
+  "keywords": [
+    "cli",
+    "react",
+    "reactdom",
+    "frontend-web"
+  ],
+  "author": {
+    "name": "Zakaria Mansouri",
+    "email": "zaqo.cs@outlook.com",
+    "url": "http://www.KenpaChi.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZibanPirate/template9/issues"
+  },
+  "homepage": "https://github.com/ZibanPirate/template9#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "arg": "^4.1.1",
+    "chalk": "^2.4.2",
+    "figlet": "^1.2.3",
+    "inquirer": "^6.5.0",
+    "shelljs": "^0.8.3"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0"
+  }
+}
