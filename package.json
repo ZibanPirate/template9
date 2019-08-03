@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/ZibanPirate/template9#readme",
   "dependencies": {
+    "arg": "^4.1.1",
     "chalk": "^2.4.2",
     "figlet": "^1.2.3",
     "inquirer": "^6.5.0",
