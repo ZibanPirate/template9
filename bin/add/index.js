@@ -7,7 +7,7 @@ module.exports = () => {
 
   switch (args._[1]) {
     case "entry":
-      console.log("entry");
+      require("./entry")();
       break;
 
     case "config":
