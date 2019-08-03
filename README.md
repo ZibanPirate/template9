@@ -2,7 +2,12 @@
 
 CLI that kinda help with frontend development
 
-## commands
+## Installation
+```terminal
+npm i -g template9
+```
+
+## Commands
 
 ### init
 
