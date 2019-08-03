@@ -1,6 +1,6 @@
 {
   "name": "template9",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "CLI that kinda help with frontend development",
   "main": "index.js",
   "scripts": {
