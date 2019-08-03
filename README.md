@@ -1,5 +1,9 @@
 # template9
 
+[![Build Status](https://travis-ci.org/ZibanPirate/template9.svg?branch=master)](https://travis-ci.org/ZibanPirate/template9)
+![npm](https://img.shields.io/npm/v/template)
+![NPM](https://img.shields.io/npm/l/template9)
+
 CLI that kinda help with frontend development
 
 ## Installation
@@ -32,7 +36,7 @@ npm i -g template9
 #### add config object
 
 - t9 add config
-    - where: global || frontend || local 
+    - where: global || frontend || local
     if (global) then ignore the nest step and choose js
     - use ts or js? (defaults to 'ts'): js || ts
     - name: [entry name]
@@ -40,7 +44,7 @@ npm i -g template9
 #### add a typescript type
 
 - t9 add type
-    - where: global || frontend || local 
+    - where: global || frontend || local
     - name: [type name]
     - props: [
         - name: [property name]
