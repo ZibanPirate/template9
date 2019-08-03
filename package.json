@@ -4,7 +4,7 @@
   "description": "CLI that kinda help with frontend development",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "exit 0"
   },
   "bin": {
     "t9": "bin/t9.js"
@@ -29,6 +29,9 @@
     "url": "https://github.com/ZibanPirate/template9/issues"
   },
   "homepage": "https://github.com/ZibanPirate/template9#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "arg": "^4.1.1",
     "chalk": "^2.4.2",
