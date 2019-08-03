@@ -1,0 +1,29 @@
+{
+  "name": "template9",
+  "version": "1.0.0-alpha.1",
+  "description": "CLI that kinda help with frontend development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZibanPirate/template9.git"
+  },
+  "keywords": [
+    "cli",
+    "react",
+    "reactdom",
+    "frontend-web"
+  ],
+  "author": {
+    "name": "Zakaria Mansouri",
+    "email": "zaqo.cs@outlook.com",
+    "url": "http://www.KenpaChi.net"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZibanPirate/template9/issues"
+  },
+  "homepage": "https://github.com/ZibanPirate/template9#readme"
+}
