@@ -63,11 +63,13 @@ npm i -g template9
     - props: [
         - name: [property name]
         - type: [property type]
-        - required: y/n
+        - nullable: y/n
+        - undefinable: y/n
+        - initial value: [default value] || not set
     ]
-    - add lazy-action?: y/n
+    - add lazy-operation?: y/n
     if (yes) then:
-    - name: [action name]
+    - name: [operation name]
     - repeatable: y/n
     - actions: [
         - function name (without parentheses): [function name]
@@ -79,18 +81,20 @@ npm i -g template9
     - in what entry?: [...entries]
     - in what scene? (blank for root): [scene name or relative path] || blank
     - name: [component name]
+    - stateless? (defaults to yes): y/n
     - props: [
         - name: [property name]
         - type: [property type]
-        - required: y/n
+        - nullable: y/n
+        - undefinable: y/n
     ]
 
-#### add lazy action
+#### add lazy operation
 
-- t9 add lazy-action
+- t9 add lazy-operation
     - in what entry?: [...entries]
     - for what scene? (blank for root): [scene name or relative path] || blank
-    - name: [lazy-action name]
+    - name: [lazy-operation name]
     - repeatable: y/n
     - actions: [
         - function name (without parentheses): [function name]
@@ -100,10 +104,17 @@ npm i -g template9
 
 - t9 add action
     - in what entry?: [...entries]
+    - in what scene? (blank for root): [scene name or relative path] || blank
     - name (without parentheses): [action name]
-    - repeatable: y/n
     - params: [
         - name: [property name]
         - type: [property type]
         - required: y/n
     ]
+
+#### add reducer
+
+- t9 add reducer
+    - in what entry?: [...entries]
+    - under what reducer?: list of reducers ,first item is 'root'
+    - name: [reducer name]

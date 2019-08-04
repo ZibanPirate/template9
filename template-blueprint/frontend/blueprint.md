@@ -1,4 +1,4 @@
-## commands
+## Commands
 
 ### init
 
