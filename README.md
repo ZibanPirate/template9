@@ -1,8 +1,8 @@
 # template9
 
 [![Build Status](https://travis-ci.org/ZibanPirate/template9.svg?branch=master)](https://travis-ci.org/ZibanPirate/template9)
-![npm](https://img.shields.io/npm/v/template9)
-![NPM](https://img.shields.io/npm/l/template9?)
+[![npm version](https://img.shields.io/npm/v/template9)](https://www.npmjs.com/package/template9)
+[![npm license](https://img.shields.io/npm/l/template9)](https://www.npmjs.com/package/template9)
 
 CLI that kinda help with frontend development
 
