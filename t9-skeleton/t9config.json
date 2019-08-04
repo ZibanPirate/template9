@@ -1,0 +1,15 @@
+{
+  "cliVersion": "1",
+  "root": "frontend",
+  "entries": [],
+  "languages": [
+    "en"
+  ],
+  "scenes": [],
+  "components": [],
+  "configs": [],
+  "types": [],
+  "lazyOperations": [],
+  "actions": [],
+  "reducers": []
+}

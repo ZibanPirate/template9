@@ -1,0 +1,25 @@
+{
+  "*": {
+    "default language code": "en",
+    "language english": "English"
+  },
+  "en": {
+    "language code": "en",
+
+    "ar": "Arabic",
+    "en": "English",
+    "fr": "French",
+    "de": "German",
+    "es": "Spanish",
+
+    "business": "Business",
+    "civil": "Civil",
+    "criminal": "Criminal",
+    "divorce": "Divorce",
+    "employment": "Employment",
+    "estate": "Estate",
+    "family": "Family",
+    "immigration": "Immigration",
+    "real estate": "Real Estate"
+  }
+}
