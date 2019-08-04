@@ -44,7 +44,7 @@ if we choose to add the first entry, the following will be added:
 - [root]/src/entries/[firstEntry]/entry/dictionary-overwrites.json
 - [root]/src/entries/[firstEntry]/entry/dictionary.json
 - [root]/src/entries/[firstEntry]/entry/dictionary.scss.json
-- [root]/src/entries/[firstEntry]/entry/index.ts
+- [root]/src/entries/[firstEntry]/entry/index.tsx
 - [root]/src/entries/[firstEntry]/entry/style-initial.scss
 - [root]/src/entries/[firstEntry]/entry/style-overwrite.scss
 - [root]/src/entries/[firstEntry]/entry/style.scss
