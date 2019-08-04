@@ -1,0 +1,161 @@
+{
+  "cliVersion": "1",
+  "root": "frontend",
+  "entries": [
+    "main",
+    "admin"
+  ],
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "scenes": [
+    {
+      "name": "Landing",
+      "path": "entries/main/scenes/landing",
+      "url": {
+        "is": "/",
+        "exact": true
+      }
+    },
+    {
+      "name": "Dashboard",
+      "path": "entries/admin/scenes/dashboard",
+      "url": {
+        "is": "/Dashboard",
+        "exact": false
+      }
+    },
+    {
+      "name": "Settings",
+      "path": "entries/admin/scenes/dashboard/settings",
+      "url": {
+        "is": "/Dashboard/Settings",
+        "exact": true
+      }
+    }
+  ],
+  "components": [
+    {
+      "name": "Navbar",
+      "path": "entries/main/components/navbar"
+    },
+    {
+      "name": "TopCities",
+      "path": "entries/main/scenes/landing/top-cities"
+    },
+    {
+      "name": "Navbar",
+      "path": "entries/admin/components/navbar"
+    },
+    {
+      "name": "Footer",
+      "path": "components/footer"
+    }
+  ],
+  "configs": [
+    {
+      "name": "availablePlans",
+      "path": "config/available-plans"
+    },
+    {
+      "name": "animation",
+      "path": "src/config/animation",
+      "type": "ts"
+    },
+    {
+      "name": "languages",
+      "path": "src/config/languages",
+      "type": "ts"
+    },
+    {
+      "name": "defaultLanguage",
+      "path": "src/entry/main/config/default-language",
+      "type": "js"
+    },
+    {
+      "name": "search",
+      "path": "src/entry/main/config/search",
+      "type": "ts"
+    },
+    {
+      "name": "defaultLanguage",
+      "path": "src/entry/admin/config/default-language",
+      "type": "js"
+    },
+    {
+      "name": "search",
+      "path": "src/entry/admin/config/search",
+      "type": "ts"
+    }
+  ],
+  "types": [
+    {
+      "name": "Lawyer",
+      "path": "types"
+    },
+    {
+      "name": "City",
+      "path": "types"
+    },
+    {
+      "name": "AdminSettings",
+      "path": "types/src/entry/admin/types"
+    }
+  ],
+  "lazyOperations": [
+    {
+      "name": "fetching-landing-info",
+      "path": "entries/main",
+      "url": {
+        "is": "/",
+        "exact": true
+      },
+      "repeatable": false,
+      "actions": [
+        "getTopCities",
+        "getTopLawyers"
+      ]
+    },
+    {
+      "name": "fetching-dashboard-info",
+      "path": "entries/admin",
+      "url": {
+        "is": "/Dashboard",
+        "exact": true
+      },
+      "repeatable": true,
+      "actions": [
+        "getLawyersCount"
+      ]
+    },
+    {
+      "name": "fetching-dashboard-setting-info",
+      "path": "entries/admin/scenes/dashboard",
+      "url": {
+        "is": "/Dashboard/Settings",
+        "exact": true
+      },
+      "repeatable": true,
+      "actions": [
+        "getDashboardSettings"
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "name": "updateDashboardSettings",
+      "path": "entries/admin/scenes/dashboard/settings"
+    }
+  ],
+  "reducers": [
+    {
+      "name": "lawyers",
+      "path": "entries/main"
+    },
+    {
+      "name": "lawyers",
+      "path": "entries/admin"
+    }
+  ]
+}
