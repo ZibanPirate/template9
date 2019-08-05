@@ -13,9 +13,8 @@ CLI that kinda help with frontend development
 - [Commands](#commands)
   - [init](#init)
   - [upgrade](#upgrade)
-  - [add](#add)
-    - [add entry](#add-entry)
-    - [add config](#add-config)
+  - [add entry](#add-entry)
+  - [add config](#add-config)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -91,9 +90,7 @@ if (add the first entry) {
 $ t9 upgrade
 ```
 
-### add
-
-#### add entry
+### add entry
 
 ```shell
 $ t9 add entry
@@ -126,7 +123,7 @@ this will do the following:
 `U: ${t9config.root}/t9config.json`
 ```
 
-#### add config
+### add config
 
 ```shell
 $ t9 add config
@@ -170,7 +167,7 @@ if ("fullstack level"){
 `U: ${t9config.root}/t9config.json`
 ```
 
-<!-- #### add type
+<!-- ### add type
 
 - t9 add type
     - where: global || frontend || local
@@ -181,7 +178,7 @@ if ("fullstack level"){
         - required: y/n
     ]
 
-#### add scene
+### add scene
 
 - t9 add scene
     - in what entry?: [...entries]
@@ -204,7 +201,7 @@ if ("fullstack level"){
         - function name (without parentheses): [function name]
     ]
 
-#### add component
+### add component
 
 - t9 add component
     - in what entry?: [...entries]
@@ -218,7 +215,7 @@ if ("fullstack level"){
         - undefinable: y/n
     ]
 
-#### add lazy-operation
+### add lazy-operation
 
 - t9 add lazy-operation
     - in what entry?: [...entries]
@@ -229,7 +226,7 @@ if ("fullstack level"){
         - function name (without parentheses): [function name]
     ]
 
-#### add action
+### add action
 
 - t9 add action
     - in what entry?: [...entries]
@@ -241,7 +238,7 @@ if ("fullstack level"){
         - required: y/n
     ]
 
-#### add reducer
+### add reducer
 
 - t9 add reducer
     - in what entry?: [...entries]
