@@ -26,8 +26,8 @@ module.exports = () => {
       console.log("component");
       break;
 
-    case "lazy-action":
-      console.log("lazy-action");
+    case "lazy-operation":
+      console.log("lazy-operation");
       break;
 
     case "action":
