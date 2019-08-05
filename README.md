@@ -15,6 +15,7 @@ CLI that kinda help with frontend development
   - [upgrade](#upgrade)
   - [add entry](#add-entry)
   - [add config](#add-config)
+  - [add type](#add-type)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -167,18 +168,42 @@ if ("fullstack level"){
 `U: ${t9config.root}/t9config.json`
 ```
 
-<!-- ### add type
+### add type
 
-- t9 add type
-    - where: global || frontend || local
-    - name: [type name]
-    - props: [
-        - name: [property name]
-        - type: [property type]
-        - required: y/n
-    ]
+```shell
+$ t9 add type
+    where do you want put the type? : [ "fullstack level", "frontend level", "entry level" ]
+  if (where === "entry level" && t9config.entries.length > 1) {
+    in what entry do you want put the type? : [ ...t9config.entries ]
+  }
+    what is the name of the type? : string!
+    add properties to the type
+    enter an empty property name when done
+  while (1) {
+    property name : string!
+    if (!property name) break;
+    property type : [ "custom", ...t9.types ]
+    if (!property type === "custom" ) {
+      enter custom property type? : string!
+    }
+    required? : [ true, false ] = false
+  }
+```
 
-### add scene
+this will do the following:
+
+```js
+if ("fullstack level"){
+  `U: ${t9config.root}/types/index.ts`
+} else if ("frontend level"){
+  `U: ${t9config.root}/src/types/index.ts`
+} else if ("entry level"){
+  `U: ${t9config.root}/src/entries/${entry}/types/index.ts`
+}
+`U: ${t9config.root}/t9config.json`
+```
+
+<!-- ### add scene
 
 - t9 add scene
     - in what entry?: [...entries]
