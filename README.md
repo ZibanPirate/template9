@@ -186,7 +186,7 @@ $ t9 add type
     if (!property type === "custom" ) {
       enter custom property type? : string!
     }
-    required? : [ true, false ] = false
+    required? : [ true, false ] = true
   }
 ```
 

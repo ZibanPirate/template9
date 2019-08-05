@@ -15,7 +15,7 @@ module.exports = () => {
       break;
 
     case "type":
-      console.log("type");
+      require("./type")();
       break;
 
     case "scene":
