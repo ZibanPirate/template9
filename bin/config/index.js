@@ -33,7 +33,7 @@ module.exports = {
       default: true,
     }
   ],
-  entryQuestions: [
+  addEntryQuestions: [
     {
       name: "name",
       type: "input",
