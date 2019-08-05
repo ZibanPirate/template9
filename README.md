@@ -6,7 +6,21 @@
 
 CLI that kinda help with frontend development
 
+## Table of Content
+
+- [Table of Content](#table-of-content)
+- [Installation](#installation)
+- [Commands](#commands)
+  - [init](#init)
+  - [upgrade](#upgrade)
+  - [add](#add)
+    - [add entry](#add-entry)
+    - [add config](#add-config)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Installation
+
 ```shell
 $ npm i -g template9
 ```
@@ -14,6 +28,7 @@ $ npm i -g template9
 ## Commands
 
 ### init
+
 ```shell
 $ t9 init
     what is the name of the project? : string!
@@ -111,7 +126,7 @@ this will do the following:
 `U: ${t9config.root}/t9config.json`
 ```
 
-#### add config object
+#### add config
 
 ```shell
 $ t9 add config
@@ -155,7 +170,7 @@ if ("fullstack level"){
 `U: ${t9config.root}/t9config.json`
 ```
 
-#### add type
+<!-- #### add type
 
 - t9 add type
     - where: global || frontend || local
@@ -203,7 +218,7 @@ if ("fullstack level"){
         - undefinable: y/n
     ]
 
-#### add lazy operation
+#### add lazy-operation
 
 - t9 add lazy-operation
     - in what entry?: [...entries]
@@ -231,4 +246,18 @@ if ("fullstack level"){
 - t9 add reducer
     - in what entry?: [...entries]
     - under what reducer?: list of reducers ,first item is 'root'
-    - name: [reducer name]
+    - name: [reducer name] -->
+
+## Contributing
+
+**Unit test** :
+Unit test are written in [Mocha](https://mochajs.org/). Please add a unit test for every new feature or bug fix. `npm test` to run the test suite.
+
+**Documentation** :
+Add documentation for every Command change. Feel free to send typo fixes and better docs!
+
+## License
+
+Copyright (c) 2019 Zakaria Mansouri (twitter: [@zibanpirate](https://twitter.com/zibanpirate))
+Licensed under the MIT license.
+
