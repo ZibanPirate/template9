@@ -11,7 +11,7 @@ module.exports = () => {
       break;
 
     case "config":
-      console.log("config");
+      require("./config")();
       break;
 
     case "type":
