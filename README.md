@@ -7,24 +7,24 @@
 CLI that kinda help with frontend development
 
 ## Installation
-```terminal
-npm i -g template9
+```shell
+$ npm i -g template9
 ```
 
 ## Commands
 
 ### init
-```terminal
-t9 init
-  what is the name of the project? : string!
-  what is the root of the project? : string = frontend
-  use docker? : y/n = Yes
-  install dependencies? : y/n = Yes
-  add the first entry? : y/n = Yes
-if (add the first entry?) {
-  what is the name of the entry? : string!
-  What is the default language code for this entry? : string = en
-}
+```shell
+$ t9 init
+    what is the name of the project? : string!
+    what is the root of the project? : string = frontend
+    use docker? : y/n = Yes
+    install dependencies? : y/n = Yes
+    add the first entry? : y/n = Yes
+  if (add the first entry?) {
+    what is the name of the entry? : string!
+    What is the default language code for this entry? : string = en
+  }
 ```
 
 this will create the following folder structure:
