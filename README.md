@@ -18,77 +18,144 @@ $ npm i -g template9
 $ t9 init
     what is the name of the project? : string!
     what is the root of the project? : string = frontend
-    use docker? : y/n = Yes
-    install dependencies? : y/n = Yes
-    add the first entry? : y/n = Yes
+    use docker? : [ true, false ] = true
+    install dependencies? : [ true, false ] = true
+    add the first entry? : [ true, false ] = true
   if (add the first entry?) {
     what is the name of the entry? : string!
     What is the default language code for this entry? : string = en
   }
 ```
 
-this will create the following folder structure:
+this will apply the following:
 
-- [root]/config/index.d.ts    // type def file
-- [root]/config/index.js    // global config
-- [root]/src/components    // frontend components
-- [root]/src/config/index.ts    // frontend config
-- [root]/src/entries    // the view layer (entry)
-- [root]/src/redux    // data layer
-- [root]/src/types/index.ts    // frontend types
-- [root]/src/types/template-types.ts    // a readonly frontend types related to template9
-- [root]/types/index.ts    // global types
-- [root]/.editorconfig    // conventional configs for the editor
-- [root]/.gitignore    // paths to be ignored by git
-- [root]/package.json    // the npm package manifest
-- [root]/t9config.json    // template9 config file
-- [root]/tsconfig.json    // typescript config file
-- [root]/tslint.json    // typescript linting config
-- [root]/webpack.config.js    // webpack config file
+```js
+`C: ${root}/config/index.d.ts` // type def file
+`C: ${root}/config/index.js` // global config
+`C: ${root}/src/components` // frontend components
+`C: ${root}/src/config/index.ts` // frontend config
+`C: ${root}/src/entries` // the view layer (entry)
+`C: ${root}/src/redux` // data layer
+`C: ${root}/src/types/index.ts` // frontend types
+`C: ${root}/src/types/template-types.ts` // a readonly frontend types related to template9
+`C: ${root}/types/index.ts` // global types
+`C: ${root}/.editorconfig` // conventional configs for the editor
+`C: ${root}/.gitignore` // paths to be ignored by git
+`C: ${root}/package.json` // the npm package manifest
+`C: ${root}/t9config.json` // template9 config file
+`C: ${root}/tsconfig.json` // typescript config file
+`C: ${root}/tslint.json` // typescript linting config
+`C: ${root}/webpack.config.js` // webpack config file
 
-if we choose to add the first entry, the following will be added:
-
-- [root]/src/entries/[firstEntry]/components    // entry components
-- [root]/src/entries/[firstEntry]/config/default-language/dictionary.json    // dictionary file
-- [root]/src/entries/[firstEntry]/config/default-language/index.d.ts    // type def file
-- [root]/src/entries/[firstEntry]/config/default-language/index.js    // default language config for this entry
-- [root]/src/entries/[firstEntry]/config/index.ts    // entry config index file
-- [root]/src/entries/[firstEntry]/entry/dictionary-fallbacks.json
-- [root]/src/entries/[firstEntry]/entry/dictionary-overwrites.json
-- [root]/src/entries/[firstEntry]/entry/dictionary.json
-- [root]/src/entries/[firstEntry]/entry/dictionary.scss.json
-- [root]/src/entries/[firstEntry]/entry/index.tsx
-- [root]/src/entries/[firstEntry]/entry/style-initial.scss
-- [root]/src/entries/[firstEntry]/entry/style-overwrite.scss
-- [root]/src/entries/[firstEntry]/entry/style.scss
-- [root]/src/entries/[firstEntry]/scenes    // entry scenes
-- [root]/src/entries/[firstEntry]/types/index.ts    // entry types
-- [root]/src/redux/[firstEntry]/actions/index.ts    // redux actions
-- [root]/src/redux/[firstEntry]/constants/index.ts    // redux constants
-- [root]/src/redux/[firstEntry]/constants/reducers.ts    // redux reducers
-- [root]/src/redux/[firstEntry]/index.ts    // redux store entry point
+if (add the first entry) {
+  `C: ${root}/src/entries/${firstEntry}/components` // entry components
+  `C: ${root}/src/entries/${firstEntry}/config/default-language/dictionary.json` // dictionary file
+  `C: ${root}/src/entries/${firstEntry}/config/default-language/index.d.ts` // type def file
+  `C: ${root}/src/entries/${firstEntry}/config/default-language/index.js` // default language config for this entry
+  `C: ${root}/src/entries/${firstEntry}/config/index.ts` // entry config index file
+  `C: ${root}/src/entries/${firstEntry}/entry/dictionary-fallbacks.json`
+  `C: ${root}/src/entries/${firstEntry}/entry/dictionary-overwrites.json`
+  `C: ${root}/src/entries/${firstEntry}/entry/dictionary.json`
+  `C: ${root}/src/entries/${firstEntry}/entry/dictionary.scss.json`
+  `C: ${root}/src/entries/${firstEntry}/entry/index.tsx`
+  `C: ${root}/src/entries/${firstEntry}/entry/style-initial.scss`
+  `C: ${root}/src/entries/${firstEntry}/entry/style-overwrite.scss`
+  `C: ${root}/src/entries/${firstEntry}/entry/style.scss`
+  `C: ${root}/src/entries/${firstEntry}/scenes` // entry scenes
+  `C: ${root}/src/entries/${firstEntry}/types/index.ts` // entry types
+  `C: ${root}/src/redux/${firstEntry}/actions/index.ts` // redux actions
+  `C: ${root}/src/redux/${firstEntry}/constants/index.ts` // redux constants
+  `C: ${root}/src/redux/${firstEntry}/constants/reducers.ts` // redux reducers
+  `C: ${root}/src/redux/${firstEntry}/index.ts` // redux store entry point
+}
+```
 
 ### upgrade
 
-- t9 upgrade
+```shell
+$ t9 upgrade
+```
 
 ### add
 
 #### add entry
 
-- t9 add entry
-    - name: [entry name]
-    - default language (defaults to 'en'): [default language code] || blank
+```shell
+$ t9 add entry
+    what is the name of the entry? : string!
+    What is the default language code for this entry? : string = "en"
+```
+
+this will do the following:
+
+```js
+`C: ${t9config.root}/src/entries/${entry}/components`
+`C: ${t9config.root}/src/entries/${entry}/config/default-language/dictionary.json`
+`C: ${t9config.root}/src/entries/${entry}/config/default-language/index.d.ts`
+`C: ${t9config.root}/src/entries/${entry}/config/default-language/index.js`
+`C: ${t9config.root}/src/entries/${entry}/config/index.ts`
+`C: ${t9config.root}/src/entries/${entry}/entry/dictionary-fallbacks.json`
+`C: ${t9config.root}/src/entries/${entry}/entry/dictionary-overwrites.json`
+`C: ${t9config.root}/src/entries/${entry}/entry/dictionary.json`
+`C: ${t9config.root}/src/entries/${entry}/entry/dictionary.scss.json`
+`C: ${t9config.root}/src/entries/${entry}/entry/index.tsx`
+`C: ${t9config.root}/src/entries/${entry}/entry/style-initial.scss`
+`C: ${t9config.root}/src/entries/${entry}/entry/style-overwrite.scss`
+`C: ${t9config.root}/src/entries/${entry}/entry/style.scss`
+`C: ${t9config.root}/src/entries/${entry}/scenes`
+`C: ${t9config.root}/src/entries/${entry}/types/index.ts`
+`C: ${t9config.root}/src/redux/${entry}/actions/index.ts`
+`C: ${t9config.root}/src/redux/${entry}/constants/index.ts`
+`C: ${t9config.root}/src/redux/${entry}/constants/reducers.ts`
+`C: ${t9config.root}/src/redux/${entry}/index.ts`
+`U: ${t9config.root}/t9config.json`
+```
 
 #### add config object
 
-- t9 add config
-    - where: global || frontend || local
-    if (global) then ignore the nest step and choose js
-    - use ts or js? (defaults to 'ts'): js || ts
-    - name: [entry name]
+```shell
+$ t9 add config
+    where do you want put the config? : [ "fullstack level", "frontend level", "entry level" ]
+  if (where === "entry level" && t9config.entries.length > 1) {
+    in what entry do you want put the config? : [ ...t9config.entries ]
+  }
+    what is the name of the config? : string!
+  if (where !== "fullstack level") {
+    typescript or javascript? : [ "typescript", "javascript" ] = "typescript"
+  }
+```
 
-#### add a typescript type
+this will do the following:
+
+```js
+if ("fullstack level"){
+  `C: ${t9config.root}/config/${config}/dictionary.json`
+  `C: ${t9config.root}/config/${config}/index.d.ts`
+  `C: ${t9config.root}/config/${config}/index.js`
+  `U: ${t9config.root}/config/index.ts`
+} else if ("frontend level"){
+  `C: ${t9config.root}/src/config/${config}/dictionary.json`
+  if ("typescript"){
+    `C: ${t9config.root}/src/config/${config}/index.ts`
+  } else if ("javascript"){
+    `C: ${t9config.root}/src/config/${config}/index.js`
+    `C: ${t9config.root}/src/config/${config}/index.d.ts`
+  }
+  `U: ${t9config.root}/src/config/index.ts`
+} else if ("entry level"){
+  `C: ${t9config.root}/src/entries/${entry}/config/${config}/dictionary.json`
+  if ("typescript"){
+    `C: ${t9config.root}/src/entries/${entry}/config/${config}/index.ts`
+  } else if ("javascript"){
+    `C: ${t9config.root}/src/entries/${entry}/config/${config}/index.js`
+    `C: ${t9config.root}/src/entries/${entry}/config/${config}/index.d.ts`
+  }
+  `U: ${t9config.root}/src/entries/${entry}/config/index.ts`
+}
+`U: ${t9config.root}/t9config.json`
+```
+
+#### add type
 
 - t9 add type
     - where: global || frontend || local
