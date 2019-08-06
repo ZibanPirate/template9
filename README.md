@@ -1,5 +1,6 @@
 # template9
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/template9)
 [![Build Status](https://travis-ci.org/ZibanPirate/template9.svg?branch=master)](https://travis-ci.org/ZibanPirate/template9)
 [![npm version](https://img.shields.io/npm/v/template9)](https://www.npmjs.com/package/template9)
 [![npm license](https://img.shields.io/npm/l/template9)](https://www.npmjs.com/package/template9)
