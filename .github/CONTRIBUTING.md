@@ -14,7 +14,7 @@ may have already been discussed or fixed in `master`. To contribute,
 ## Do you have a suggestion?
 
 Feature requests should be submitted in the
-[issue tracker](https://github.com/ZibanPirate/template9/issues), with a description of
+[issue tracker](https://github.com/ZibanPirate/template9/issues/new/choose), with a description of
 the expected behavior & use case.
 Before submitting a request, please search for similar ones in the
 [closed issues](https://github.com/ZibanPirate/template9/issues?q=is%3Aissue+is%3Aclosed+label%3Aenhancement).
