@@ -15,13 +15,7 @@ Please use one of the following resources for help:
 
 **Questions**
 
-- https://stackoverflow.com/tags/loopbackjs
-- https://groups.google.com/forum/#!forum/loopbackjs
-- https://gitter.im/strongloop/loopback
-
-**Immediate support**
-
-- https://strongloop.com/api-connect-faqs/
-- https://strongloop.com/node-js/subscription-plans/
+- https://stackoverflow.com/tags/template9js
+- https://groups.google.com/forum/#!forum/template9js
 
 -->
