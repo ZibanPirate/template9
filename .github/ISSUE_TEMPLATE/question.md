@@ -16,6 +16,5 @@ Please use one of the following resources for help:
 **Questions**
 
 - https://stackoverflow.com/tags/template9js
-- https://groups.google.com/forum/#!forum/template9js
 
 -->
