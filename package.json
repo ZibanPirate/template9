@@ -4,7 +4,8 @@
   "description": "CLI that kinda help with frontend development",
   "main": "bin/t9.js",
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "style": "eslint bin/**/*.js"
   },
   "bin": {
     "t9": "bin/t9.js"
