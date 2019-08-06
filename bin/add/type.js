@@ -9,10 +9,10 @@ const askQuestions = async () => {
   answers.name = (await inquirer.prompt([questions.addTypeQuestions[2]])).name;
   answers.properties = [];
   let name, type, required;
-  console.log("add properties to the type")
+  console.log("add properties to the type");
   console.log("enter an empty property name when done");
   let i = 1;
-  while (name = (await inquirer.prompt([{ ...questions.addTypeQuestions[3], message: i + "# " + questions.addTypeQuestions[3].message }])).propertyName) {
+  while ((name = (await inquirer.prompt([{ ...questions.addTypeQuestions[3], message: i + "# " + questions.addTypeQuestions[3].message }])).propertyName)) {
     type = (await inquirer.prompt([questions.addTypeQuestions[4]])).propertyType;
     if (type === "custom") {
       type = (await inquirer.prompt([questions.addTypeQuestions[5]])).customPropertyType;

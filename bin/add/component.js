@@ -1,2 +1,2 @@
 #! /usr/bin/env node
-console.log('add command');
+console.log("add command");
