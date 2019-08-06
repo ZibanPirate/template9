@@ -12,7 +12,6 @@ CLI that kinda help with frontend development
 - [Installation](#installation)
 - [Commands](#commands)
   - [init](#init)
-  - [upgrade](#upgrade)
   - [add entry](#add-entry)
   - [add config](#add-config)
   - [add type](#add-type)
@@ -83,12 +82,6 @@ if (add the first entry) {
   `C: ${root}/src/redux/${firstEntry}/constants/reducers.ts` // redux reducers
   `C: ${root}/src/redux/${firstEntry}/index.ts` // redux store entry point
 }
-```
-
-### upgrade
-
-```shell
-$ t9 upgrade
 ```
 
 ### add entry
