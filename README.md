@@ -15,6 +15,7 @@ CLI that kinda help with frontend development
   - [add entry](#add-entry)
   - [add config](#add-config)
   - [add type](#add-type)
+  - [add scene](#add-scene)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -196,7 +197,16 @@ if ("fullstack level"){
 `U: ${t9config.root}/t9config.json`
 ```
 
-<!-- ### add scene
+### add scene
+
+```shell
+$ t9 add scene
+    in what entry do you want put the scene? : [ ...t9config.entries ]
+    what is the name of the scene? : string!
+  if (where !== "fullstack level") {
+    typescript or javascript? : [ "typescript", "javascript" ] = "typescript"
+  }
+```
 
 - t9 add scene
     - in what entry?: [...entries]
@@ -219,7 +229,7 @@ if ("fullstack level"){
         - function name (without parentheses): [function name]
     ]
 
-### add component
+<!-- ### add component
 
 - t9 add component
     - in what entry?: [...entries]
