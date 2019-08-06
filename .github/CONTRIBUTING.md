@@ -8,7 +8,7 @@ Contributions are always welcome. Before contributing please read the
 [code of conduct](https://github.com/ZibanPirate/template9/blob/master/CODE_OF_CONDUCT.md) &
 [search the issue tracker](https://github.com/ZibanPirate/template9/issues); your issue
 may have already been discussed or fixed in `master`. To contribute,
-[fork](https://help.github.com/articles/fork-a-repo/) Lodash, commit your changes,
+[fork](https://help.github.com/articles/fork-a-repo/) template9, commit your changes,
 & [send a pull request](https://help.github.com/articles/using-pull-requests/).
 
 ## Do you have a suggestion?
