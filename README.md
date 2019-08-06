@@ -266,6 +266,8 @@ if ("fullstack level"){
 
 ## Contributing
 
+To get started see [the contributing guidelines](https://github.com/ZibanPirate/template9/blob/master/.github/CONTRIBUTING.md).
+
 **Unit test** :
 Unit test are written in [Mocha](https://mochajs.org/). Please add a unit test for every new feature or bug fix. `npm test` to run the test suite.
 
