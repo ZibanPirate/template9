@@ -20,6 +20,7 @@ CLI that kinda help with frontend development
   - [add component](#add-component)
   - [add lazy-operation](#add-lazy-operation)
   - [add action](#add-action)
+  - [add reducer](#add-reducer)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -221,7 +222,7 @@ $ t9 add scene
     }
     nullable? : [ true, false ] = true
     undefinable? : [ true, false ] = false
-    initial value? : string
+    initial value? : { JS statement }
   }
     add lazy operation for this scene? : [ true, false ] = true
   if (add lazy operation for this scene) {
@@ -287,7 +288,7 @@ $ t9 add component
     }
     nullable? : [ true, false ] = true
     undefinable? : [ true, false ] = false
-    initial value? : string
+    initial value? : { JS statement }
   }
   if (!stateless) {
     fill the properties of the state object of the component
@@ -301,7 +302,7 @@ $ t9 add component
     }
     nullable? : [ true, false ] = true
     undefinable? : [ true, false ] = false
-    initial value? : string
+    initial value? : { JS statement }
   }
   }
 ```
@@ -401,12 +402,40 @@ if (!groupe){
 `U: ${t9config.root}/t9config.json`
 ```
 
-<!-- ### add reducer
+### add reducer
 
-- t9 add reducer
-    - in what entry?: [...entries]
-    - under what reducer?: list of reducers ,first item is 'root'
-    - name: [reducer name] -->
+```shell
+$ t9 add reducer
+    in what entry do you want put the reducer? : [ ...t9config.entries ]
+    under what reducer do you want put it? : [ "root", ...t9config.reducers ]
+    what is the name of the reducer? : string!
+    fill the properties of the state object of the reducer
+    enter an empty property name when done
+  while (1) {
+    property name : string!
+    if (!property name) break;
+    property type : [ "custom", ...t9.types ]
+    if (!property type === "custom" ) {
+      enter custom property type? : string!
+    }
+    nullable? : [ true, false ] = true
+    undefinable? : [ true, false ] = false
+    initial value? : { JS statement }
+  }
+```
+
+this will do the following:
+
+```js
+if (!reducer){
+  `C: ${t9config.root}/src/redux/${entry}/reducer/${name}/index.ts`
+  `U: ${t9config.root}/src/redux/${entry}/reducer/index.ts`
+} else if (reducer){
+  `C: ${t9config.root}/src/redux/${entry}/reducer/${reducer}/${name}/index.ts`
+  `U: ${t9config.root}/src/redux/${entry}/reducer/${reducer}/index.ts`
+}
+`U: ${t9config.root}/t9config.json`
+```
 
 ## Contributing
 
