@@ -18,6 +18,7 @@ CLI that kinda help with frontend development
   - [add type](#add-type)
   - [add scene](#add-scene)
   - [add component](#add-component)
+  - [add lazy-operation](#add-lazy-operation)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -312,18 +313,36 @@ if (!scene){
 `U: ${t9config.root}/t9config.json`
 ```
 
-<!-- ### add lazy-operation
+### add lazy-operation
 
-- t9 add lazy-operation
-    - in what entry?: [...entries]
-    - for what scene? (blank for root): [scene name or relative path] || blank
-    - name: [lazy-operation name]
-    - repeatable: y/n
-    - actions: [
-        - function name (without parentheses): [function name]
-    ]
+```shell
+$ t9 add lazy-operation
+    in what entry do you want put the operation? : [ ...t9config.entries ]
+    under what scene do you want put it? : [ "root", ...t9config.scenes ]
+    what is the name of the operation? : string!
+    what is the url path of the operation? : string!
+    preform exact match on the url path? : [ true, false] = true
+    repeatable? : [ true, false ] = false
+    add actions to the operation
+    enter an empty action name when done
+    while (1) {
+      action name : string!
+      if (!action name) break;
+    }
+```
 
-### add action
+this will do the following:
+
+```js
+if (!scene){
+  `U: ${t9config.root}/src/entries/${entry}/entry/index.tsx`
+} else if (scene){
+  `U: ${t9config.root}/src/entries/${entry}/scenes/${scenePath}/index.tsx`
+}
+`U: ${t9config.root}/t9config.json`
+```
+
+<!-- ### add action
 
 - t9 add action
     - in what entry?: [...entries]
