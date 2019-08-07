@@ -17,6 +17,7 @@ CLI that kinda help with frontend development
   - [add config](#add-config)
   - [add type](#add-type)
   - [add scene](#add-scene)
+  - [add component](#add-component)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -207,7 +208,7 @@ $ t9 add scene
     what is the name of the scene? : string!
     what is the url path of the scene? : string!
     preform exact match on the url path? : [ true, false] = true
-    add properties to the type
+    add properties to the scene
     enter an empty property name when done
   while (1) {
     property name : string!
@@ -254,21 +255,64 @@ if (!scene){
 `U: ${t9config.root}/t9config.json`
 ```
 
-<!-- ### add component
+### add component
 
-- t9 add component
-    - in what entry?: [...entries]
-    - in what scene? (blank for root): [scene name or relative path] || blank
-    - name: [component name]
-    - stateless? (defaults to yes): y/n
-    - props: [
-        - name: [property name]
-        - type: [property type]
-        - nullable: y/n
-        - undefinable: y/n
-    ]
+```shell
+$ t9 add component
+    in what entry do you want put the component? : [ ...t9config.entries ]
+    under what scene do you want put it? : [ "root", ...t9config.scenes ]
+    what is the name of the component? : string!
+    stateless? : [ true, false] = true
+    add properties to the component
+    enter an empty property name when done
+  while (1) {
+    property name : string!
+    if (!property name) break;
+    property type : [ "custom", ...t9.types ]
+    if (!property type === "custom" ) {
+      enter custom property type? : string!
+    }
+    nullable? : [ true, false ] = true
+    undefinable? : [ true, false ] = false
+    initial value? : string
+  }
+  if (!stateless) {
+    fill the properties of the state object of the component
+    enter an empty property name when done
+  while (1) {
+    property name : string!
+    if (!property name) break;
+    property type : [ "custom", ...t9.types ]
+    if (!property type === "custom" ) {
+      enter custom property type? : string!
+    }
+    nullable? : [ true, false ] = true
+    undefinable? : [ true, false ] = false
+    initial value? : string
+  }
+  }
+```
 
-### add lazy-operation
+this will do the following:
+
+```js
+if (!scene){
+  `C: ${t9config.root}/src/entries/${entry}/components/${name}/dictionary.json`
+  `C: ${t9config.root}/src/entries/${entry}/components/${name}/index.tsx`
+  `C: ${t9config.root}/src/entries/${entry}/components/${name}/index.scss`
+
+  `U: ${t9config.root}/src/entries/${entry}/entry/index.scss`
+} else if (scene){
+  `C: ${t9config.root}/src/entries/${entry}/scenes/${scenePath}/components/${name}/dictionary.json`
+  `C: ${t9config.root}/src/entries/${entry}/scenes/${scenePath}/components/${name}/index.tsx`
+  `C: ${t9config.root}/src/entries/${entry}/scenes/${scenePath}/components/${name}/index.scss`
+
+  `U: ${t9config.root}/src/entries/${entry}/entry/index.scss`
+}
+`U: ${t9config.root}/t9config.json`
+```
+
+<!-- ### add lazy-operation
 
 - t9 add lazy-operation
     - in what entry?: [...entries]
