@@ -16,6 +16,7 @@ CLI that kinda help with frontend development
   - [add entry](#add-entry)
   - [add config](#add-config)
   - [add type](#add-type)
+  - [add scene](#add-scene)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -197,30 +198,63 @@ if ("fullstack level"){
 `U: ${t9config.root}/t9config.json`
 ```
 
-<!-- ### add scene
+### add scene
 
-- t9 add scene
-    - in what entry?: [...entries]
-    - in what scene? (blank for root): [scene name] || blank
-    - name: [scene name]
-    - url path: [url path for lazy component]
-    - exact?: y/n
-    - props: [
-        - name: [property name]
-        - type: [property type]
-        - nullable: y/n
-        - undefinable: y/n
-        - initial value: [default value] || not set
-    ]
-    - add lazy-operation?: y/n
-    if (yes) then:
-    - name: [operation name]
-    - repeatable: y/n
-    - actions: [
-        - function name (without parentheses): [function name]
-    ]
+```shell
+$ t9 add scene
+    in what entry do you want put the scene? : [ ...t9config.entries ]
+    under what scene do you want put it? : [ "root", ...t9config.scenes ]
+    what is the name of the scene? : string!
+    what is the url path of the scene? : string!
+    preform exact match on the url path? : [ true, false] = true
+    add properties to the type
+    enter an empty property name when done
+  while (1) {
+    property name : string!
+    if (!property name) break;
+    property type : [ "custom", ...t9.types ]
+    if (!property type === "custom" ) {
+      enter custom property type? : string!
+    }
+    nullable? : [ true, false ] = true
+    undefinable? : [ true, false ] = false
+    initial value? : string
+  }
+    add lazy operation for this scene? : [ true, false ] = true
+  if (add lazy operation for this scene) {
+    what is the name of the operation? : string!
+    repeatable? : [ true, false ] = false
+    add actions to the lazy operation
+    enter an empty action name when done
+    while (1) {
+      action name : string!
+      if (!action name) break;
+    }
+  }
+```
 
-### add component
+this will do the following:
+
+```js
+if (!scene){
+  `C: ${t9config.root}/src/entries/${entry}/scenes/${name}/dictionary.json`
+  `C: ${t9config.root}/src/entries/${entry}/scenes/${name}/index.tsx`
+  `C: ${t9config.root}/src/entries/${entry}/scenes/${name}/index.scss`
+
+  `U: ${t9config.root}/src/entries/${entry}/entry/index.scss`
+  `U: ${t9config.root}/src/entries/${entry}/entry/index.tsx`
+} else if (scene){
+  `C: ${t9config.root}/src/entries/${entry}/scenes/${scenePath}/${name}/dictionary.json`
+  `C: ${t9config.root}/src/entries/${entry}/scenes/${scenePath}/${name}/index.tsx`
+  `C: ${t9config.root}/src/entries/${entry}/scenes/${scenePath}/${name}/index.scss`
+
+  `U: ${t9config.root}/src/entries/${entry}/entry/index.scss`
+  `U: ${t9config.root}/src/entries/${entry}/scenes/${scenePath}/index.tsx`
+}
+`U: ${t9config.root}/t9config.json`
+```
+
+<!-- ### add component
 
 - t9 add component
     - in what entry?: [...entries]
