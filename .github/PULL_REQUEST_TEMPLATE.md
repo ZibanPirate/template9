@@ -12,6 +12,7 @@ See also #23
 
 - [ ] `npm test` passes on your machine
 - [ ] New tests added or existing tests modified to cover all changes
+- [ ] Code conforms with the [style guide](https://github.com/ZibanPirate/template9/blob/master/.github/CONTRIBUTING.md#coding-guidelines)
 - [ ] API Documentation in code was updated
 - [ ] Affected `template-blueprint`
 - [ ] Affected `t9-skeleton`
