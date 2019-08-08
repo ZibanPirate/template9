@@ -228,9 +228,9 @@ $ t9 add scene
   if (add lazy operation for this scene) {
     what is the name of the operation? : string!
     repeatable? : [ true, false ] = false
-    under what groupe do you want put its actions? : [ "/${scene?}", "root", ...t9config.actions.map(to groups), "< create new one >" ]
-      if ( groupe === "< create new one >" ){
-        what is the name of the groupe? : string!
+    under what group do you want put its actions? : [ "/${scene?}", "root", ...t9config.actions.map(to groups), "< create new one >" ]
+      if ( group === "< create new one >" ){
+        what is the name of the group? : string!
       }
     add actions to the lazy operation
     enter an empty action name when done
@@ -260,10 +260,10 @@ if (!scene){
   `U: ${t9config.root}/src/entries/${entry}/scenes/${scene}/index.tsx`
 }
 if ( add lazy operation for this scene ) {
-  if (!groupe){
+  if (!group){
     `U: ${t9config.root}/src/redux/${entry}/actions/index.ts`
-  } else if (groupe){
-    `C|U: ${t9config.root}/src/redux/${entry}/actions/${groupe}/index.ts`
+  } else if (group){
+    `C|U: ${t9config.root}/src/redux/${entry}/actions/${group}/index.ts`
   }
 }
 `U: ${t9config.root}/t9config.json`
@@ -336,9 +336,9 @@ $ t9 add lazy-operation
     what is the url path of the operation? : string!
     preform exact match on the url path? : [ true, false] = true
     repeatable? : [ true, false ] = false
-    under what groupe do you want put its actions? : [ "root", ...t9config.actions.map(to groups), "< create new one >" ]
-      if ( groupe === "< create new one >" ){
-        what is the name of the groupe? : string!
+    under what group do you want put its actions? : [ "root", ...t9config.actions.map(to groups), "< create new one >" ]
+      if ( group === "< create new one >" ){
+        what is the name of the group? : string!
       }
     add actions to the operation
     enter an empty action name when done
@@ -356,10 +356,10 @@ if (!scene){
 } else if (scene){
   `U: ${t9config.root}/src/entries/${entry}/scenes/${scene}/index.tsx`
 }
-if (!groupe){
+if (!group){
   `U: ${t9config.root}/src/redux/${entry}/actions/index.ts`
-} else if (groupe){
-  `C|U: ${t9config.root}/src/redux/${entry}/actions/${groupe}/index.ts`
+} else if (group){
+  `C|U: ${t9config.root}/src/redux/${entry}/actions/${group}/index.ts`
 }
 `U: ${t9config.root}/t9config.json`
 ```
@@ -369,9 +369,9 @@ if (!groupe){
 ```shell
 $ t9 add action
     in what entry do you want put the action? : [ ...t9config.entries ]
-    under what groupe do you want put it? : [ "root", ...t9config.actions.map(to groups), "< create new one >" ]
-    if ( groupe === "< create new one >" ){
-      what is the name of the groupe? : string!
+    under what group do you want put it? : [ "root", ...t9config.actions.map(to groups), "< create new one >" ]
+    if ( group === "< create new one >" ){
+      what is the name of the group? : string!
     }
     what is the name of the action? : string!
     add parameter to the action function
@@ -394,10 +394,10 @@ $ t9 add action
 this will do the following:
 
 ```js
-if (!groupe){
+if (!group){
   `U: ${t9config.root}/src/redux/${entry}/actions/index.ts`
-} else if (groupe){
-  `C|U: ${t9config.root}/src/redux/${entry}/actions/${groupe}/index.ts`
+} else if (group){
+  `C|U: ${t9config.root}/src/redux/${entry}/actions/${group}/index.ts`
 }
 `U: ${t9config.root}/t9config.json`
 ```
