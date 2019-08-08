@@ -34,6 +34,10 @@ module.exports = () => {
       console.log("action");
       break;
 
+    case "reducer":
+      console.log("reducer");
+      break;
+
     default:
       console.log("unknown command!");
       break;
