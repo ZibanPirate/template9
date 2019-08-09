@@ -19,7 +19,7 @@ module.exports = () => {
       break;
 
     case "scene":
-      console.log("scene");
+      require("./scene")();
       break;
 
     case "component":
