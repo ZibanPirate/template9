@@ -1,10 +1,10 @@
 const inquirer = require("inquirer");
-const questions = require("../config");
+const questions = require("../../config/questions");
 
 const askQuestions = async () => {
   const answers = await inquirer.prompt(questions.initQuestions);
   if (answers.entry) {
-    answers.entry = await inquirer.prompt(questions.entryQuestions);
+    answers.entry = await inquirer.prompt(questions.addEntryQuestions);
   }
   return answers;
 };

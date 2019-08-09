@@ -1,5 +1,5 @@
 const inquirer = require("inquirer");
-const questions = require("../../config");
+const questions = require("../../config/questions");
 
 const askQuestions = async () => {
   const answers = await inquirer.prompt([questions.addTypeQuestions[0]]);
@@ -11,15 +11,15 @@ const askQuestions = async () => {
   let name, type, required;
   console.log("add properties to the type");
   console.log("enter an empty property name when done");
-  let i = 1;
-  while ((name = (await inquirer.prompt([{ ...questions.addTypeQuestions[3], message: i + "# " + questions.addTypeQuestions[3].message }])).propertyName)) {
+  let index = 1;
+  while ((name = (await inquirer.prompt([{ ...questions.addTypeQuestions[3], message: index + "# " + questions.addTypeQuestions[3].message }])).propertyName)) {
     type = (await inquirer.prompt([questions.addTypeQuestions[4]])).propertyType;
     if (type === "custom") {
       type = (await inquirer.prompt([questions.addTypeQuestions[5]])).customPropertyType;
     }
     required = (await inquirer.prompt([questions.addTypeQuestions[6]])).propertyRequired;
     answers.properties.push({ name, type, required });
-    i++;
+    index++;
   }
   return answers;
 };
