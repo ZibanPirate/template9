@@ -288,7 +288,6 @@ $ t9 add component
     }
     nullable? : [ true, false ] = true
     undefinable? : [ true, false ] = false
-    initial value? : { JS statement }
   }
   if (!stateless) {
     fill the properties of the state object of the component

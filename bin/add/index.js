@@ -23,7 +23,7 @@ module.exports = () => {
       break;
 
     case "component":
-      console.log("component");
+      require("./component")();
       break;
 
     case "lazy-operation":

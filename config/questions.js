@@ -243,4 +243,98 @@ module.exports = {
       message: "Action name",
     },
   ],
+  addComponentQuestions: [
+    {
+      name: "entry",
+      type: "list",
+      message: "in what entry do you want put the component?",
+      choices: t9config.entries,
+    },
+    {
+      name: "scene",
+      type: "list",
+      message: "under what scene do you want put?",
+    },
+    {
+      name: "name",
+      type: "input",
+      message: "what is the name of the component?",
+      validate: (answer) => {
+        return answer ? true : "please provide a name for the component";
+      },
+    },
+    {
+      name: "stateless",
+      type: "confirm",
+      message: "stateless?",
+      default: true,
+    },
+    {
+      name: "propertyName",
+      type: "input",
+      message: "property name",
+    },
+    {
+      name: "propertyType",
+      type: "list",
+      message: "type",
+      choices: [...types, "custom"],
+    },
+    {
+      name: "customPropertyType",
+      type: "input",
+      message: "enter custom property type",
+      validate: (answer) => {
+        return answer ? true : "please provide a custom type";
+      },
+    },
+    {
+      name: "propertyNullable",
+      type: "confirm",
+      message: "nullable?",
+      default: true,
+    },
+    {
+      name: "propertyUndefinable",
+      type: "confirm",
+      message: "undefinable?",
+      default: false,
+    },
+    {
+      name: "sPropertyName",
+      type: "input",
+      message: "property name",
+    },
+    {
+      name: "sPropertyType",
+      type: "list",
+      message: "type",
+      choices: [...types, "custom"],
+    },
+    {
+      name: "customSPropertyType",
+      type: "input",
+      message: "enter custom property type",
+      validate: (answer) => {
+        return answer ? true : "please provide a custom type";
+      },
+    },
+    {
+      name: "sPropertyNullable",
+      type: "confirm",
+      message: "nullable?",
+      default: true,
+    },
+    {
+      name: "sPropertyUndefinable",
+      type: "confirm",
+      message: "undefinable?",
+      default: false,
+    },
+    {
+      name: "sPropertyInitialValue",
+      type: "input",
+      message: "initial value?",
+    },
+  ],
 };
