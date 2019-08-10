@@ -337,4 +337,63 @@ module.exports = {
       message: "initial value?",
     },
   ],
+  addLazyOperationQuestions: [
+    {
+      name: "entry",
+      type: "list",
+      message: "in what entry do you want put the lazy operation?",
+      choices: t9config.entries,
+    },
+    {
+      name: "scene",
+      type: "list",
+      message: "under what scene do you want put?",
+    },
+    {
+      name: "name",
+      type: "input",
+      message: "what is the name of the lazy operation?",
+      validate: (answer) => {
+        return answer ? true : "please provide a name for the lazy operation";
+      },
+    },
+    {
+      name: "url",
+      type: "input",
+      message: "what is the url path of the lazy operation?",
+      validate: (answer) => {
+        return answer ? true : "please provide a url path for the lazy operation";
+      },
+    },
+    {
+      name: "exact",
+      type: "confirm",
+      message: "preform exact match on the url path?",
+      default: true,
+    },
+    {
+      name: "repeatable",
+      type: "confirm",
+      message: "repeatable?",
+      default: false,
+    },
+    {
+      name: "actionsGroup",
+      type: "list",
+      message: "under what group do you want put its actions?",
+    },
+    {
+      name: "newActionsGroup",
+      type: "input",
+      message: "enter group name",
+      validate: (answer) => {
+        return answer ? true : "please provide a group name";
+      },
+    },
+    {
+      name: "actionName",
+      type: "input",
+      message: "Action name",
+    },
+  ]
 };

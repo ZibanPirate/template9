@@ -27,7 +27,7 @@ module.exports = () => {
       break;
 
     case "lazy-operation":
-      console.log("lazy-operation");
+      require("./lazy-operation")();
       break;
 
     case "action":
