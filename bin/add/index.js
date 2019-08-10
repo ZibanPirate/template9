@@ -31,7 +31,7 @@ module.exports = () => {
       break;
 
     case "action":
-      console.log("action");
+      require("./action")();
       break;
 
     case "reducer":

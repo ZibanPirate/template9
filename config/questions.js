@@ -395,5 +395,65 @@ module.exports = {
       type: "input",
       message: "Action name",
     },
-  ]
+  ],
+  addActionQuestions: [
+    {
+      name: "entry",
+      type: "list",
+      message: "in what entry do you want put the action?",
+      choices: t9config.entries,
+    },
+    {
+      name: "actionsGroup",
+      type: "list",
+      message: "under what group do you want put this actions?",
+    },
+    {
+      name: "newActionsGroup",
+      type: "input",
+      message: "enter group name",
+      validate: (answer) => {
+        return answer ? true : "please provide a group name";
+      },
+    },
+    {
+      name: "name",
+      type: "input",
+      message: "what is the name of the action?",
+      validate: (answer) => {
+        return answer ? true : "please provide a name for the action";
+      },
+    },
+    {
+      name: "parameterName",
+      type: "input",
+      message: "parameter name",
+    },
+    {
+      name: "parameterType",
+      type: "list",
+      message: "type",
+      choices: [...types, "custom"],
+    },
+    {
+      name: "customParameterType",
+      type: "input",
+      message: "enter custom parameter type",
+      validate: (answer) => {
+        return answer ? true : "please provide a custom type";
+      },
+    },
+    {
+      name: "parameterRequired",
+      type: "confirm",
+      message: "required?",
+      default: true,
+    },
+    {
+      name: "parameterDefaultValue",
+      type: "input",
+      message: "default value?",
+    },
+
+  ],
 };
