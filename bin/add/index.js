@@ -35,7 +35,7 @@ module.exports = () => {
       break;
 
     case "reducer":
-      console.log("reducer");
+      require("./reducer")();
       break;
 
     default:

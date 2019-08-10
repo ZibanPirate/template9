@@ -456,4 +456,61 @@ module.exports = {
     },
 
   ],
+  addReducerQuestions: [
+    {
+      name: "entry",
+      type: "list",
+      message: "in what entry do you want put the reducer?",
+      choices: t9config.entries,
+    },
+    {
+      name: "reducer",
+      type: "list",
+      message: "under what reducer do you want put?",
+    },
+    {
+      name: "name",
+      type: "input",
+      message: "what is the name of the reducer?",
+      validate: (answer) => {
+        return answer ? true : "please provide a name for the reducer";
+      },
+    },
+    {
+      name: "propertyName",
+      type: "input",
+      message: "property name",
+    },
+    {
+      name: "propertyType",
+      type: "list",
+      message: "type",
+      choices: [...types, "custom"],
+    },
+    {
+      name: "customPropertyType",
+      type: "input",
+      message: "enter custom property type",
+      validate: (answer) => {
+        return answer ? true : "please provide a custom type";
+      },
+    },
+    {
+      name: "propertyNullable",
+      type: "confirm",
+      message: "nullable?",
+      default: true,
+    },
+    {
+      name: "propertyUndefinable",
+      type: "confirm",
+      message: "undefinable?",
+      default: false,
+    },
+    {
+      name: "propertyInitialValue",
+      type: "input",
+      message: "initial value?",
+    },
+  ],
 };
