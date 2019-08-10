@@ -8,7 +8,10 @@ const arg = require("arg");
 console.log(chalk.green(figlet.textSync("t9")));
 
 // choose what command:
-const args = arg({});
+const args = arg({ "--version": Boolean, "-v": "--version" });
+
+if (args["--version"]) { require("./version")(); }
+
 if (args._.length <= 0) { console.log("missing command!"); process.exit(); }
 
 switch (args._[0]) {

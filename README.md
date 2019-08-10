@@ -21,6 +21,8 @@ CLI that kinda help with frontend development
   - [add lazy-operation](#add-lazy-operation)
   - [add action](#add-action)
   - [add reducer](#add-reducer)
+- [Flags](#flags)
+  - [Version](#version)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -434,6 +436,18 @@ if (!reducer){
   `U: ${t9config.root}/src/redux/${entry}/reducer/${reducer}/index.ts`
 }
 `U: ${t9config.root}/t9config.json`
+```
+
+## Flags
+
+### Version
+
+```shell
+$ t9 --version
+```
+or
+```shell
+$ t9 -v
 ```
 
 ## Contributing
