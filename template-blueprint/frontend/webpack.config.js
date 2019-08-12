@@ -1,6 +1,7 @@
 // required modules
 const path = require("path");
 const webpack = require("webpack");
+const StringReplacePlugin = require("string-replace-webpack-plugin");
 
 // setting up project configs
 const t9config = require("./t9config.json");
@@ -8,6 +9,7 @@ const t9config = require("./t9config.json");
 const isDevelopment = true;
 const isProduction = false;
 const port = 3002;
+const entriesPathLength = (__dirname + "/src/entries/").length;
 
 const webpackConfigArray = [];
 
@@ -36,6 +38,46 @@ const pushWebpackConfig = (language) => {
     mode: isProduction ? "production" : (isDevelopment ? "development" : "none"),
     module: {
       rules: [
+        // https://github.com/jamesandersen/string-replace-webpack-plugin
+        {
+          test: /\.[tj]sx?$/,
+          loader: StringReplacePlugin.replace({
+            replacements: [{
+              pattern: /({\|)[A-Za-z0-9\s]+(\|})/ig,
+              replacement: function (match) {
+                // we have: language, file path, placeholder, entry
+                const entry = this.resourcePath.substring(entriesPathLength, this.resourcePath.indexOf("/", entriesPathLength));
+                const placeholder = match.slice(2, -2);
+
+                // try to get from overwrites
+                const overwrites = require(`./src/entries/${entry}/entry/dictionary-overwrites.json`);
+                let value;
+                if (overwrites["*"] && (value = overwrites["*"][placeholder])) {
+                  return value;
+                } else if (overwrites[language] && (value = overwrites[language][placeholder])) {
+                  return value;
+                } else {
+                  // then, try from this.resourcePath.json
+                  const fileDictionary = require(path.join(path.dirname(this.resourcePath), "/dictionary.json"));
+                  if (fileDictionary[language] && (value = fileDictionary[language][placeholder])) {
+                    return value;
+                  } else {
+                    // and then try the fallbacks
+                    const fallbacks = require(`./src/entries/${entry}/entry/dictionary-fallbacks.json`);
+                    if (fallbacks["*"] && (value = fallbacks["*"][placeholder])) {
+                      return value;
+                    } else if (fallbacks[language] && (value = fallbacks[language][placeholder])) {
+                      return value;
+                    } else {
+                      // finally if it's not found, set a placeholder value instead
+                      return "PLACEHOLDER";
+                    }
+                  }
+                }
+              },
+            }],
+          }),
+        },
         // https://github.com/microsoft/TypeScript-Babel-Starter#create-a-webpackconfigjs
         { exclude: /node_modules/, loader: "babel-loader", test: /\.tsx?$/ },
         // https://webpack.js.org/loaders/source-map-loader/

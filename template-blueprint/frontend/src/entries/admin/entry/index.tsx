@@ -4,7 +4,7 @@ import { render } from "react-dom";
 render(
   (
     <>
-      <h1>Hello from admin page</h1>
+      {/* <h1>{"{|Hi|} from admin page"}</h1> */}
     </>
   )
   ,
