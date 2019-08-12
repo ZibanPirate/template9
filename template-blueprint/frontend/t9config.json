@@ -1,6 +1,8 @@
 {
+  "name": "contosso",
   "cliVersion": "1",
-  "root": "frontend",
+  "developmentLanguage": "en",
+  "distFolder": "../data/bundle_files",
   "entries": [
     "main",
     "admin"

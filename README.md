@@ -103,26 +103,26 @@ $ t9 add entry
 this will do the following:
 
 ```js
-`C: ${t9config.root}/src/entries/${entry}/components`
-`C: ${t9config.root}/src/entries/${entry}/config/default-language/dictionary.json`
-`C: ${t9config.root}/src/entries/${entry}/config/default-language/index.d.ts`
-`C: ${t9config.root}/src/entries/${entry}/config/default-language/index.js`
-`C: ${t9config.root}/src/entries/${entry}/config/index.ts`
-`C: ${t9config.root}/src/entries/${entry}/entry/dictionary-fallbacks.json`
-`C: ${t9config.root}/src/entries/${entry}/entry/dictionary-overwrites.json`
-`C: ${t9config.root}/src/entries/${entry}/entry/dictionary.json`
-`C: ${t9config.root}/src/entries/${entry}/entry/dictionary.scss.json`
-`C: ${t9config.root}/src/entries/${entry}/entry/index.tsx`
-`C: ${t9config.root}/src/entries/${entry}/entry/style-initial.scss`
-`C: ${t9config.root}/src/entries/${entry}/entry/style-overwrite.scss`
-`C: ${t9config.root}/src/entries/${entry}/entry/style.scss`
-`C: ${t9config.root}/src/entries/${entry}/scenes`
-`C: ${t9config.root}/src/entries/${entry}/types/index.ts`
-`C: ${t9config.root}/src/redux/${entry}/actions/index.ts`
-`C: ${t9config.root}/src/redux/${entry}/constants/index.ts`
-`C: ${t9config.root}/src/redux/${entry}/constants/reducers.ts`
-`C: ${t9config.root}/src/redux/${entry}/index.ts`
-`U: ${t9config.root}/t9config.json`
+`C: ${root}/src/entries/${entry}/components`
+`C: ${root}/src/entries/${entry}/config/default-language/dictionary.json`
+`C: ${root}/src/entries/${entry}/config/default-language/index.d.ts`
+`C: ${root}/src/entries/${entry}/config/default-language/index.js`
+`C: ${root}/src/entries/${entry}/config/index.ts`
+`C: ${root}/src/entries/${entry}/entry/dictionary-fallbacks.json`
+`C: ${root}/src/entries/${entry}/entry/dictionary-overwrites.json`
+`C: ${root}/src/entries/${entry}/entry/dictionary.json`
+`C: ${root}/src/entries/${entry}/entry/dictionary.scss.json`
+`C: ${root}/src/entries/${entry}/entry/index.tsx`
+`C: ${root}/src/entries/${entry}/entry/style-initial.scss`
+`C: ${root}/src/entries/${entry}/entry/style-overwrite.scss`
+`C: ${root}/src/entries/${entry}/entry/style.scss`
+`C: ${root}/src/entries/${entry}/scenes`
+`C: ${root}/src/entries/${entry}/types/index.ts`
+`C: ${root}/src/redux/${entry}/actions/index.ts`
+`C: ${root}/src/redux/${entry}/constants/index.ts`
+`C: ${root}/src/redux/${entry}/constants/reducers.ts`
+`C: ${root}/src/redux/${entry}/index.ts`
+`U: ${root}/t9config.json`
 ```
 
 ### add config
@@ -143,30 +143,30 @@ this will do the following:
 
 ```js
 if ("fullstack level"){
-  `C: ${t9config.root}/config/${config}/dictionary.json`
-  `C: ${t9config.root}/config/${config}/index.d.ts`
-  `C: ${t9config.root}/config/${config}/index.js`
-  `U: ${t9config.root}/config/index.ts`
+  `C: ${root}/config/${config}/dictionary.json`
+  `C: ${root}/config/${config}/index.d.ts`
+  `C: ${root}/config/${config}/index.js`
+  `U: ${root}/config/index.ts`
 } else if ("frontend level"){
-  `C: ${t9config.root}/src/config/${config}/dictionary.json`
+  `C: ${root}/src/config/${config}/dictionary.json`
   if ("typescript"){
-    `C: ${t9config.root}/src/config/${config}/index.ts`
+    `C: ${root}/src/config/${config}/index.ts`
   } else if ("javascript"){
-    `C: ${t9config.root}/src/config/${config}/index.js`
-    `C: ${t9config.root}/src/config/${config}/index.d.ts`
+    `C: ${root}/src/config/${config}/index.js`
+    `C: ${root}/src/config/${config}/index.d.ts`
   }
-  `U: ${t9config.root}/src/config/index.ts`
+  `U: ${root}/src/config/index.ts`
 } else if ("entry level"){
-  `C: ${t9config.root}/src/entries/${entry}/config/${config}/dictionary.json`
+  `C: ${root}/src/entries/${entry}/config/${config}/dictionary.json`
   if ("typescript"){
-    `C: ${t9config.root}/src/entries/${entry}/config/${config}/index.ts`
+    `C: ${root}/src/entries/${entry}/config/${config}/index.ts`
   } else if ("javascript"){
-    `C: ${t9config.root}/src/entries/${entry}/config/${config}/index.js`
-    `C: ${t9config.root}/src/entries/${entry}/config/${config}/index.d.ts`
+    `C: ${root}/src/entries/${entry}/config/${config}/index.js`
+    `C: ${root}/src/entries/${entry}/config/${config}/index.d.ts`
   }
-  `U: ${t9config.root}/src/entries/${entry}/config/index.ts`
+  `U: ${root}/src/entries/${entry}/config/index.ts`
 }
-`U: ${t9config.root}/t9config.json`
+`U: ${root}/t9config.json`
 ```
 
 ### add type
@@ -195,13 +195,13 @@ this will do the following:
 
 ```js
 if ("fullstack level"){
-  `U: ${t9config.root}/types/index.ts`
+  `U: ${root}/types/index.ts`
 } else if ("frontend level"){
-  `U: ${t9config.root}/src/types/index.ts`
+  `U: ${root}/src/types/index.ts`
 } else if ("entry level"){
-  `U: ${t9config.root}/src/entries/${entry}/types/index.ts`
+  `U: ${root}/src/entries/${entry}/types/index.ts`
 }
-`U: ${t9config.root}/t9config.json`
+`U: ${root}/t9config.json`
 ```
 
 ### add scene
@@ -247,28 +247,28 @@ this will do the following:
 
 ```js
 if (!scene){
-  `C: ${t9config.root}/src/entries/${entry}/scenes/${name}/dictionary.json`
-  `C: ${t9config.root}/src/entries/${entry}/scenes/${name}/index.tsx`
-  `C: ${t9config.root}/src/entries/${entry}/scenes/${name}/index.scss`
+  `C: ${root}/src/entries/${entry}/scenes/${name}/dictionary.json`
+  `C: ${root}/src/entries/${entry}/scenes/${name}/index.tsx`
+  `C: ${root}/src/entries/${entry}/scenes/${name}/index.scss`
 
-  `U: ${t9config.root}/src/entries/${entry}/entry/index.scss`
-  `U: ${t9config.root}/src/entries/${entry}/entry/index.tsx`
+  `U: ${root}/src/entries/${entry}/entry/index.scss`
+  `U: ${root}/src/entries/${entry}/entry/index.tsx`
 } else if (scene){
-  `C: ${t9config.root}/src/entries/${entry}/scenes/${scene}/${name}/dictionary.json`
-  `C: ${t9config.root}/src/entries/${entry}/scenes/${scene}/${name}/index.tsx`
-  `C: ${t9config.root}/src/entries/${entry}/scenes/${scene}/${name}/index.scss`
+  `C: ${root}/src/entries/${entry}/scenes/${scene}/${name}/dictionary.json`
+  `C: ${root}/src/entries/${entry}/scenes/${scene}/${name}/index.tsx`
+  `C: ${root}/src/entries/${entry}/scenes/${scene}/${name}/index.scss`
 
-  `U: ${t9config.root}/src/entries/${entry}/entry/index.scss`
-  `U: ${t9config.root}/src/entries/${entry}/scenes/${scene}/index.tsx`
+  `U: ${root}/src/entries/${entry}/entry/index.scss`
+  `U: ${root}/src/entries/${entry}/scenes/${scene}/index.tsx`
 }
 if ( add lazy operation for this scene ) {
   if (!group){
-    `U: ${t9config.root}/src/redux/${entry}/actions/index.ts`
+    `U: ${root}/src/redux/${entry}/actions/index.ts`
   } else if (group){
-    `C|U: ${t9config.root}/src/redux/${entry}/actions/${group}/index.ts`
+    `C|U: ${root}/src/redux/${entry}/actions/${group}/index.ts`
   }
 }
-`U: ${t9config.root}/t9config.json`
+`U: ${root}/t9config.json`
 ```
 
 ### add component
@@ -312,19 +312,19 @@ this will do the following:
 
 ```js
 if (!scene){
-  `C: ${t9config.root}/src/entries/${entry}/components/${name}/dictionary.json`
-  `C: ${t9config.root}/src/entries/${entry}/components/${name}/index.tsx`
-  `C: ${t9config.root}/src/entries/${entry}/components/${name}/index.scss`
+  `C: ${root}/src/entries/${entry}/components/${name}/dictionary.json`
+  `C: ${root}/src/entries/${entry}/components/${name}/index.tsx`
+  `C: ${root}/src/entries/${entry}/components/${name}/index.scss`
 
-  `U: ${t9config.root}/src/entries/${entry}/entry/index.scss`
+  `U: ${root}/src/entries/${entry}/entry/index.scss`
 } else if (scene){
-  `C: ${t9config.root}/src/entries/${entry}/scenes/${scene}/components/${name}/dictionary.json`
-  `C: ${t9config.root}/src/entries/${entry}/scenes/${scene}/components/${name}/index.tsx`
-  `C: ${t9config.root}/src/entries/${entry}/scenes/${scene}/components/${name}/index.scss`
+  `C: ${root}/src/entries/${entry}/scenes/${scene}/components/${name}/dictionary.json`
+  `C: ${root}/src/entries/${entry}/scenes/${scene}/components/${name}/index.tsx`
+  `C: ${root}/src/entries/${entry}/scenes/${scene}/components/${name}/index.scss`
 
-  `U: ${t9config.root}/src/entries/${entry}/entry/index.scss`
+  `U: ${root}/src/entries/${entry}/entry/index.scss`
 }
-`U: ${t9config.root}/t9config.json`
+`U: ${root}/t9config.json`
 ```
 
 ### add lazy-operation
@@ -353,16 +353,16 @@ this will do the following:
 
 ```js
 if (!scene){
-  `U: ${t9config.root}/src/entries/${entry}/entry/index.tsx`
+  `U: ${root}/src/entries/${entry}/entry/index.tsx`
 } else if (scene){
-  `U: ${t9config.root}/src/entries/${entry}/scenes/${scene}/index.tsx`
+  `U: ${root}/src/entries/${entry}/scenes/${scene}/index.tsx`
 }
 if (!group){
-  `U: ${t9config.root}/src/redux/${entry}/actions/index.ts`
+  `U: ${root}/src/redux/${entry}/actions/index.ts`
 } else if (group){
-  `C|U: ${t9config.root}/src/redux/${entry}/actions/${group}/index.ts`
+  `C|U: ${root}/src/redux/${entry}/actions/${group}/index.ts`
 }
-`U: ${t9config.root}/t9config.json`
+`U: ${root}/t9config.json`
 ```
 
 ### add action
@@ -396,11 +396,11 @@ this will do the following:
 
 ```js
 if (!group){
-  `U: ${t9config.root}/src/redux/${entry}/actions/index.ts`
+  `U: ${root}/src/redux/${entry}/actions/index.ts`
 } else if (group){
-  `C|U: ${t9config.root}/src/redux/${entry}/actions/${group}/index.ts`
+  `C|U: ${root}/src/redux/${entry}/actions/${group}/index.ts`
 }
-`U: ${t9config.root}/t9config.json`
+`U: ${root}/t9config.json`
 ```
 
 ### add reducer
@@ -429,13 +429,13 @@ this will do the following:
 
 ```js
 if (!reducer){
-  `C: ${t9config.root}/src/redux/${entry}/reducer/${name}/index.ts`
-  `U: ${t9config.root}/src/redux/${entry}/reducer/index.ts`
+  `C: ${root}/src/redux/${entry}/reducer/${name}/index.ts`
+  `U: ${root}/src/redux/${entry}/reducer/index.ts`
 } else if (reducer){
-  `C: ${t9config.root}/src/redux/${entry}/reducer/${reducer}/${name}/index.ts`
-  `U: ${t9config.root}/src/redux/${entry}/reducer/${reducer}/index.ts`
+  `C: ${root}/src/redux/${entry}/reducer/${reducer}/${name}/index.ts`
+  `U: ${root}/src/redux/${entry}/reducer/${reducer}/index.ts`
 }
-`U: ${t9config.root}/t9config.json`
+`U: ${root}/t9config.json`
 ```
 
 ## Flags
