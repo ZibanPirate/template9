@@ -36,8 +36,8 @@ const pushWebpackConfig = (language) => {
     mode: isProduction ? "production" : (isDevelopment ? "development" : "none"),
     module: {
       rules: [
-        // https://github.com/TypeStrong/ts-loader
-        { loader: "ts-loader", options: { configFile: path.join(__dirname, "./tsconfig.json"), }, test: /\.tsx?$/, },
+        // https://github.com/microsoft/TypeScript-Babel-Starter#create-a-webpackconfigjs
+        { exclude: /node_modules/, loader: "babel-loader", test: /\.tsx?$/ },
         // https://webpack.js.org/loaders/source-map-loader/
         { enforce: "pre", loader: "source-map-loader", test: /\.js$/ },
       ],

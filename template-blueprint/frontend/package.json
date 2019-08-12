@@ -14,10 +14,19 @@
     "webpack-dev-server": "webpack-dev-server --config ./webpack.config.js -wd --progress --hot"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-numeric-separator": "^7.2.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "7.0.0",
+    "@babel/preset-typescript": "^7.3.3",
     "@types/node": "^11.11.3",
     "@types/react": "^16.3.17",
     "@types/react-dom": "^16.0.6",
     "@types/react-router-dom": "^4.2.7",
+    "babel-loader": "^8.0.6",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "source-map-loader": "^0.2.3",
@@ -26,7 +35,7 @@
     "tslib": "^1.9.2",
     "tslint": "^5.10.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.3.3333",
+    "typescript": "^3.5.3",
     "webpack": "^4.12.0",
     "webpack-cli": "^3.0.3",
     "webpack-dev-server": "^3.1.4"
