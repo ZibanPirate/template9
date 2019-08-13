@@ -3,16 +3,17 @@ const path = require("path");
 const webpack = require("webpack");
 const StringReplacePlugin = require("string-replace-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserJSPlugin = require("terser-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
-// setting up project configs
+// setting up project configs and some vars
 const t9config = require("./t9config.json");
-
 const isDevelopment = true;
 const isProduction = false;
 const port = 3002;
 const entriesPathLength = (__dirname + "/src/entries/").length;
-
 const webpackConfigArray = [];
+
 // match replacement function
 const replacement = (language) => function (match) {
   // we have: language, file path, placeholder, entry
@@ -84,6 +85,7 @@ const pushWebpackConfig = (language) => {
         { exclude: /node_modules/, loader: "babel-loader", test: /\.tsx?$/ },
         // https://webpack.js.org/loaders/source-map-loader/
         { enforce: "pre", loader: "source-map-loader", test: /\.js$/ },
+        // https://github.com/webpack-contrib/mini-css-extract-plugin/
         {
           test: /\.(sa|sc|c)ss$/,
           use: [
@@ -96,15 +98,22 @@ const pushWebpackConfig = (language) => {
                 replacements: [{ pattern: /({\|)[A-Za-z0-9\s]+(\|})/ig, replacement: replacement(language) }],
               }),
             },
+            // https://github.com/webpack-contrib/css-loader
             "css-loader",
+            // https://github.com/postcss/postcss-loader#plugins
             {
               loader: "postcss-loader",
               options: { plugins: () => [require("precss"), require("autoprefixer")] },
             },
+            // https://github.com/webpack-contrib/sass-loader
             "sass-loader",
           ],
         },
       ],
+    },
+    // https://webpack.js.org/configuration/optimization/#optimizationminimizer
+    optimization: {
+      minimizer: [new TerserJSPlugin({}), new OptimizeCSSAssetsPlugin({})],
     },
     // https://webpack.js.org/concepts/output/#multiple-entry-points
     output: {
@@ -115,11 +124,11 @@ const pushWebpackConfig = (language) => {
     },
     plugins: [
       // https://webpack.js.org/plugins/hot-module-replacement-plugin/
-      isDevelopment ? new webpack.HotModuleReplacementPlugin() : null,
+      isDevelopment ? new webpack.HotModuleReplacementPlugin() : () => null,
       // https://github.com/webpack-contrib/mini-css-extract-plugin#advanced-configuration-example
       new MiniCssExtractPlugin({
-        filename: isDevelopment ? "[name].css" : "[name].[hash].css",
-        chunkFilename: isDevelopment ? "[id].css" : "[id].[hash].css",
+        filename: isDevelopment ? "[name].css" : "[name].css",
+        chunkFilename: isDevelopment ? "[id].css" : "[id].css",
       }),
     ],
     // https://webpack.js.org/configuration/resolve/#resolveextensions
