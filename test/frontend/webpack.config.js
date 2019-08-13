@@ -77,10 +77,7 @@ const pushWebpackConfig = (language) => {
         {
           test: /\.[tj]sx?$/,
           loader: StringReplacePlugin.replace({
-            replacements: [{
-              pattern: /({\|)[A-Za-z0-9\s]+(\|})/ig,
-              replacement: replacement(language),
-            }],
+            replacements: [{ pattern: /({\|)[A-Za-z0-9\s]+(\|})/ig, replacement: replacement(language) }],
           }),
         },
         // https://github.com/microsoft/TypeScript-Babel-Starter#create-a-webpackconfigjs
@@ -96,10 +93,7 @@ const pushWebpackConfig = (language) => {
             },
             {
               loader: StringReplacePlugin.replace({
-                replacements: [{
-                  pattern: /({\|)[A-Za-z0-9\s]+(\|})/ig,
-                  replacement: replacement(language),
-                }],
+                replacements: [{ pattern: /({\|)[A-Za-z0-9\s]+(\|})/ig, replacement: replacement(language) }],
               }),
             },
             "css-loader",
@@ -115,9 +109,9 @@ const pushWebpackConfig = (language) => {
     // https://webpack.js.org/concepts/output/#multiple-entry-points
     output: {
       chunkFilename: "[name].chunk.js",
-      filename: "[name].bundle.js",
-      path: path.join(__dirname, t9config.distFolder, "/w/js/comp/" + language + "/"),
-      publicPath: path.join("/w/js/comp/", language + "/"),
+      filename: "[name].js",
+      path: path.join(__dirname, t9config.distFolder, "/w/comp/" + language + "/"),
+      publicPath: path.join("/w/comp/", language + "/"),
     },
     plugins: [
       // https://webpack.js.org/plugins/hot-module-replacement-plugin/
