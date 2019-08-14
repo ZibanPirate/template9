@@ -476,8 +476,8 @@ Add documentation for every Command change. Feel free to send typo fixes and bet
 
 * [ ]  Use the new React **lazy** and **suspense** for the lazy switch for scenes and sub-scenes
 * [ ]  Lazy operations
-* [x]  New Localization algorithm #
-* [x]  Slipt style instead of loading one giant CSS bundle #
+* [x]  New Localization algorithm zibanpirate@fc703dda458b69ea704dfc25a8821c3a402c308e
+* [x]  Slipt style instead of loading one giant CSS bundle zibanpirate@ee3d500d5a7466a377bafef0626740627f8f57b7
 * [ ]  **SSR** with `React.lazy` (no need for server side **Redux**, just stick with loading lazy components with **initial state** )
 * [ ]  Transition and animation
 * [ ]  Blocking lazyloading
