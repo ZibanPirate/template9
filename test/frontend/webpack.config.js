@@ -131,8 +131,15 @@ const pushWebpackConfig = (language) => {
         chunkFilename: isDevelopment ? "[id].css" : "[id].css",
       }),
     ],
-    // https://webpack.js.org/configuration/resolve/#resolveextensions
-    resolve: { extensions: [".ts", ".tsx", ".js", ".json", ".scss"] },
+    resolve: {
+      // https://webpack.js.org/configuration/resolve/#resolvealias
+      alias: {
+        t9redux: path.resolve(__dirname, "src/redux"),
+        t9entries: path.resolve(__dirname, "src/entries"),
+      },
+      // https://webpack.js.org/configuration/resolve/#resolveextensions
+      extensions: [".ts", ".tsx", ".js", ".json", ".scss"]
+    },
     // https://webpack.js.org/configuration/target/
     target: "web",
   });
