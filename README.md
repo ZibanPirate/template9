@@ -24,6 +24,9 @@ CLI that kinda help with frontend development
 - [Flags](#flags)
   - [Version](#version)
 - [Contributing](#contributing)
+- [Todos](#todos)
+  - [CLI](#cli)
+  - [Template](#template)
 - [License](#license)
 
 ## Installation
@@ -459,6 +462,26 @@ Unit test are written in [Mocha](https://mochajs.org/). Please add a unit test f
 
 **Documentation** :
 Add documentation for every Command change. Feel free to send typo fixes and better docs!
+
+## Todos
+
+### CLI
+
+* [x]  CLI prompts
+* [ ]  Init a new project (with an optional example)
+* [ ]  Update existing project (add scenes, ...etc)
+* [ ]  Upgrade the template of an existing project
+
+### Template
+
+* [ ]  Use the new React **lazy** and **suspense** for the lazy switch for scenes and sub-scenes
+* [ ]  Lazy operations
+* [x]  New Localization algorithm #
+* [x]  Slipt style instead of loading one giant CSS bundle #
+* [ ]  **SSR** with `React.lazy` (no need for server side **Redux**, just stick with loading lazy components with **initial state** )
+* [ ]  Transition and animation
+* [ ]  Blocking lazyloading
+* [ ]  Use Concurrent React when it comes out instead of Blocking lazyloading
 
 ## License
 
