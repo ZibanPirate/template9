@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  test:macOS:
+  test-macOS:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
@@ -16,7 +16,7 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  test:ubuntu-latest:
+  test-ubuntu-latest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -26,7 +26,7 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  test:windows-latest:
+  test-windows-latest:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
