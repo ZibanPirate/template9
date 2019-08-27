@@ -16,7 +16,7 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  test-ubuntu-latest:
+  test-ubuntu:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -26,7 +26,7 @@ jobs:
       - run: npm ci
       - run: npm test
 
-  test-windows-latest:
+  test-windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
