@@ -3,7 +3,7 @@ name: publish template9 Package
 on:
   push:
     tags:
-      - *
+      - '*'
 
 jobs:
   publish-npm:
