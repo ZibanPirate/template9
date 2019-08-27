@@ -1,0 +1,37 @@
+name: CLI tests
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:macOS:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - run: npm ci
+      - run: npm test
+
+  test:ubuntu-latest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - run: npm ci
+      - run: npm test
+
+  test:windows-latest:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 10
+      - run: npm ci
+      - run: npm test
