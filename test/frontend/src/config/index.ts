@@ -1,1 +1,5 @@
-// this is the frontend config
+import { environment } from "./environment";
+
+export const frontendConfig = {
+  environment,
+};
