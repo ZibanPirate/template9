@@ -2,8 +2,8 @@ name: Node.js Package
 
 on:
   push:
-    branches:
-      - refs/tags/*
+    tags:
+      - *
 
 jobs:
   publish-npm:
