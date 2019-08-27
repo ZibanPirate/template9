@@ -37,11 +37,11 @@
     "arg": "^4.1.1",
     "chalk": "^2.4.2",
     "figlet": "^1.2.3",
-    "inquirer": "^6.5.0",
-    "recast": "^0.18.1",
+    "inquirer": "^6.5.2",
+    "recast": "^0.18.2",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
-    "eslint": "^6.1.0"
+    "eslint": "^6.2.2"
   }
 }
