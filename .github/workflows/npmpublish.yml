@@ -5,6 +5,7 @@ on:
     branches:
       - refs/tags/*
 
+jobs:
   publish-npm:
     runs-on: macOS-10.14
     steps:
